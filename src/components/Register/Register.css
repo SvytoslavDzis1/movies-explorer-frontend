@@ -1,0 +1,30 @@
+.form__input-name {
+  font-size: 10px;
+  line-height: 12px;
+  color: #8b8b8b;
+  padding-bottom: 5px;
+}
+
+.form__input {
+  background-color: #202020;
+  border: none;
+  font-weight: 400;
+  border-bottom: 1px #424242 solid;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  padding: 0 0 10px 0;
+  margin-bottom: 6px;
+}
+
+.form__input:focus {
+  outline-style: none;
+  border-bottom: 1px #4285f4 solid;
+}
+
+.form__input-error-span {
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
+  padding-bottom: 6px;
+}
