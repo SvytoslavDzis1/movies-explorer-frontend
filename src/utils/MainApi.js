@@ -114,7 +114,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  url: "http://localhost:3001",
+  url: "https://api.svatoslav.nomoredomains.work",
   headers: {
     'Accept': 'application/json',
     "Content-type": "application/json"
