@@ -12,6 +12,7 @@ import SavedMovies from "../SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import Preloader from "../Preloader/Preloader";
 
 function App() {
   const [movies, setMovies] = React.useState([]);
@@ -44,7 +45,7 @@ function App() {
       })
       .catch((err) => {
         setInfoMessage(err.message);
-        setTimeout(() => setInfoMessage(""), 7000);
+        setTimeout(() => setInfoMessage(""), 5000);
       });
   };
 
@@ -60,16 +61,17 @@ function App() {
       })
       .catch((err) => {
         setInfoMessage(err.message);
-        setTimeout(() => setInfoMessage(""), 7000);
+        setTimeout(() => setInfoMessage(""), 5000);
       });
   };
 
   // Проверки авторизации пользователя при входе на сайт
   React.useEffect(() => {
-    const jwt = localStorage.getItem("jwt");
-    if (jwt) {
+    //const jwt = localStorage.getItem("jwt");
+    setIsLoading(true)
+    //if (jwt) {
       mainApi
-        .getUser(jwt)
+        .getUser()
         .then((res) => {
           setLoggedIn(true);
           //navigate('/movies')
@@ -79,7 +81,7 @@ function App() {
           console.log(`Ошибка: ${err.message}`);
         })
         .finally(() => setIsLoading(false));
-    }
+    //}
   }, []);
 
   // Сохранение данных профиля
@@ -369,6 +371,10 @@ function App() {
   React.useEffect(() => {
     changeClassButton();
   }, [movies]);
+
+  if (loggedIn === null) {
+    return <Preloader isLoading={isLoading} />
+  }
 
   return (
     <div className="App">

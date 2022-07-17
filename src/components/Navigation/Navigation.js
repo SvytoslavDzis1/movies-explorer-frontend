@@ -1,5 +1,4 @@
 import { NavLink, Link } from "react-router-dom";
-
 import profileLogo from "../../images/profile.svg";
 
 function Navigation() {
