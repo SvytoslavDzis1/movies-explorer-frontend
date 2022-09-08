@@ -7,7 +7,7 @@
 
 Стек:
 HTML, CSS, JavaScript, BEM, Flexbox, Grid Layout, node.js Figma
---------------------------------------------------
+
 ## Системные требования:
 - React: 17.0.2,
 - React-dom: 17.0.2,
