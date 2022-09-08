@@ -15,3 +15,6 @@
 
 1. Домен frontend: https://svatoslav.nomoredomains.work/ 
 2. Домен backend: https://api.svatoslav.nomoredomains.work/
+
+## Статус проекта
+Проект завершен.
