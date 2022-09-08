@@ -13,5 +13,5 @@
 - Validator: 13.7.0,
 - Web-vitals: 2.1.4
 
-Домен frontend: https://svatoslav.nomoredomains.work/ 
-Домен backend: https://api.svatoslav.nomoredomains.work/
+1. Домен frontend: https://svatoslav.nomoredomains.work/ 
+2. Домен backend: https://api.svatoslav.nomoredomains.work/
